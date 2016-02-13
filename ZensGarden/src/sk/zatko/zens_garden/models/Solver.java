@@ -65,7 +65,9 @@ public class Solver implements Runnable {
 		
 		
 		try {
-			in.close();
+			if(in != null) {
+				in.close();
+			}
 		} catch (IOException e) {
 
 			e.printStackTrace();

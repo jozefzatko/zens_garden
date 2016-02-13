@@ -61,10 +61,13 @@ public class FromFileToGarden {
 			
 			return false;
 		}
-
-		this.xSize = Integer.parseInt(firstLine.substring(0, firstLine.indexOf(" ")));
-		this.ySize = Integer.parseInt(firstLine.substring(firstLine.indexOf(" ") + 1, firstLine.length()));
 		
+		if (firstLine != null) {
+			
+			this.xSize = Integer.parseInt(firstLine.substring(0, firstLine.indexOf(" ")));
+			this.ySize = Integer.parseInt(firstLine.substring(firstLine.indexOf(" ") + 1, firstLine.length()));
+		}
+
 		this.gardenMatrix = new int[this.ySize][this.xSize];
 
 		String fileLine = "";
